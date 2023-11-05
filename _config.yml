@@ -1,12 +1,12 @@
-title: John Smith
+title: Sumin Park
 description: My Personal Blog
-author: John Smith
-logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
+author: Sumin Park
+logo: /static/img/avatar.png
+github: https://github.com/suparklingmin
 about: Freelance developer
 
-baseurl: "https://codeasashu.github.io/hcz-jekyll-blog"
-url: "https://codeasashu.github.io/hcz-jekyll-blog"
+baseurl: "https://suparklingmin.github.io"
+url: "https://suparklingmin.github.io"
 
 allowsearch: true
 
@@ -15,7 +15,7 @@ google_analytics: UA-72862926-1
 
 share:
   twitter_username: \#
-  fb_appid: 000000000000
+  # fb_appid: 000000000000
 
 
 enableTags: true
