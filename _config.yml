@@ -22,10 +22,10 @@ url: https://suparklingmin.github.io # the base hostname & protocol for your sit
 author:
   name: Sumin Park
   twitter: suparklingmin
-  picture: assets/images/min.png
+  picture: /assets/images/min.png
 twitter_username:
-github_username:
-logo: # path of site logo, e.g. "/assets/images/logo.png"
+github_username: suparklingmin
+logo: /assets/images/min.png # path of site logo, e.g. "/assets/images/logo.png"
 search: # true, false (default)
 search_full_content: false # true, false (default)
 search_provider: # lunr (default), algolia
