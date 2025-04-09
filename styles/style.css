@@ -3,3 +3,18 @@
 p {
     color: dimgray;
 }
+
+.song {
+    color:palevioletred;
+}
+
+a {
+    color: cornflowerblue;
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-style: italic;
+}
