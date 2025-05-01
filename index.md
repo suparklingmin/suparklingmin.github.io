@@ -4,12 +4,6 @@ title: Home
 description: Sumin Park's Home Page
 ---
 
-📍 *College of Humanities, Seoul National University*  
-📧 [mam3b@snu.ac.kr](mailto:mam3b@snu.ac.kr)  
-🔗 [GitHub: suparklingmin](https://github.com/suparklingmin)  
-
----
-
 ## 🧑‍🏫 About Me
 
 I am a computational linguist and currently a visiting assistant professor at the College of Humanities, Seoul National University. My work lies at the intersection of linguistics, data science, and artificial intelligence, with a focus on natural language processing (NLP) in both academic and applied domains. I have led and contributed to multiple interdisciplinary research projects involving medical NLP, neural text summarization, and word embedding techniques for Korean.
