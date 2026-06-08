@@ -4,11 +4,12 @@ title_en: "Seminar in Data Science for the Humanities"
 regular: true
 order: 3
 date: 2026-03-01
-description: "인문학을 위한 데이터과학 세미나 (서울대 디지털인문학 연계전공)"
+description: "서울대학교 연계전공 인문데이터과학 전공필수. 졸업논문 작성."
 ---
 
-*Seminar in Data Science for the Humanities* · 서울대학교 인문대학 디지털인문학(데이터과학) 연계전공 (객원조교수)
+*Seminar in Data Science for the Humanities* · 서울대학교 인문대학 연계전공 인문데이터과학 전공필수
 
-인문학을 위한 데이터과학 주제를 깊이 있게 다루는 세미나입니다.
+인문데이터과학 졸업 프로젝트 수행 및 논문 작성.
 
-- **개설**: 2024년 가을 · 2025년 봄 · 2025년 가을 · 2026년 봄학기
+- **담당교수**: 박수민(비전임 초빙조교수)
+- **개설**: 2024년 2학기 · 2025년 1·2학기 · 2026년 1학기
