@@ -37,8 +37,8 @@ function makeBook(){
   new Chart(document.getElementById('bookChart'),{type:'bar',
     data:{labels:BYBOOK.map(b=>b[0]),datasets:[{data:BYBOOK.map(b=>b[1]),
       backgroundColor:BYBOOK.map((b,i)=>i<4?C.sweet:C.sweetSoft),borderRadius:5}]},
-    options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+'회'}}},
-      scales:{x:{beginAtZero:true,grid:{color:'#eee2cc'},title:{display:true,text:'출현 횟수'}},y:{grid:{display:false},ticks:{font:{size:12}}}},
+    options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+'회'}}},
+      scales:{x:{beginAtZero:true,grid:{color:'#eee2cc'},title:{display:true,text:'출현 횟수'}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:11}}}},
       animation:{duration:1100}}});
 }
 function makeFood(){
