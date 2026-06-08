@@ -10,10 +10,12 @@ I studied linguistics and mathematics at Seoul National University (BA, BSc) and
 
 ## Research Interests
 
-- Korean word and sentence embeddings and pretrained language models
-- Natural language processing for medical and clinical text
-- Quantitative lexical and semantic studies of historical Korean
-- Teaching data science for humanities research
+I model **linguistic variation** quantitatively and apply it to literary and historical texts — describing, through frequency, co-occurrence, and distribution in corpora, how the same referent, meaning, or function is realized differently under different conditions, at levels that reach beyond literal meaning into the pragmatic, stylistic, and social.
+
+- **Variation across time (diachronic)** — lexical and semantic change in historical Korean and historical corpora (e.g. the taste adjective *dalda* "sweet" in Joseon cookbooks; the character *鬼* in the *Veritable Records of the Joseon Dynasty*)
+- **Variation across social conditions (synchronic)** — differences by speaker–addressee relation, medium, and readership (e.g. self-reference terms in the Standard Histories; gendered references [X-男]/[X-女] in news headlines)
+- **Meaning beyond similarity** — sentence representations that capture not only semantic but also pragmatic and stylistic relations between texts
+- Working on contemporary Korean, Classical Chinese sources, and Hangul manuscripts with the same methods, and releasing the models, data, and code I use
 
 ## Contact
 
