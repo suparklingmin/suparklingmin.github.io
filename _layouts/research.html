@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 {%- comment -%}
-  study.html — 연구 인터랙티브 문서 공통 레이아웃
+  research.html — 연구 인터랙티브 문서 공통 레이아웃
   ------------------------------------------------------------------------
   두 가지 사용 방식을 지원합니다.
 
   (A) 관리형(managed) — 권장: 새 문서를 빠르게 만들 때.
       front matter로 히어로·내비·푸터·테마를 구성하고 본문 섹션만 작성.
-      study.css / study.js 가 공통 스타일·인터랙션을 제공합니다.
+      research.css / research.js 가 공통 스타일·인터랙션을 제공합니다.
       예시는 _research/template.md 참고.
 
   (B) 자립형(bare) — 기존 외부 제작 문서를 그대로 통합할 때.
@@ -15,15 +15,15 @@
       예시는 _research/dalda.html, _research/gwi.html 참고.
 
   사용 가능한 front matter:
-    layout:  study              (필수)
+    layout:  research              (필수)
     title:   "문서 제목"         (필수 · <title>, 히어로 기본 헤드라인)
     description: "..."          (SEO meta)
     theme:   default|dalda|gui  (색 팔레트, 기본 default)
     chart:   true               (Chart.js CDN 포함)
-    core_css: false             (study.css 끄기 — 자립형 문서용)
-    core_js:  false             (study.js·진행바 끄기 — 자립형 문서용)
+    core_css: false             (research.css 끄기 — 자립형 문서용)
+    core_js:  false             (research.js·진행바 끄기 — 자립형 문서용)
     extra_css:                  (추가 CSS 파일)
-      - /assets/css/my-study.css
+      - /assets/css/my-research.css
     hero:                       (있을 때만 렌더; 자립형은 본문에 직접 둠)
       badge / word / headline / subtitle / citation / scrolldown
     nav:                        (있을 때만 렌더)
@@ -32,7 +32,7 @@
     home_link: true             (콘텐츠 푸터에 사이트 홈 링크)
     site_chrome: false          (공통 사이트 헤더/푸터 끄기 — 기본 켜짐)
     scripts:                    (문서 전용 JS 파일)
-      - /assets/js/my-study.js
+      - /assets/js/my-research.js
 {%- endcomment -%}
 <html lang="{{ page.lang | default: site.lang | default: 'ko' }}" data-theme="{{ page.theme | default: 'default' }}">
 <head>
@@ -45,10 +45,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 
   {%- unless page.site_chrome == false %}
-  <link rel="stylesheet" href="{{ '/assets/css/study-chrome.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/research-chrome.css' | relative_url }}">
   {%- endunless %}
   {%- unless page.core_css == false %}
-  <link rel="stylesheet" href="{{ '/assets/css/study.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
   {%- endunless %}
   {%- if page.extra_css %}
   {%- for css in page.extra_css %}
@@ -92,7 +92,7 @@
 
 {%- comment -%} ─── 내비게이션 (front matter에 nav가 있을 때만) ────────── {%- endcomment -%}
 {%- if page.nav %}
-<nav class="study-nav"><div class="inner">
+<nav class="research-nav"><div class="inner">
   {%- for item in page.nav %}
   <a href="{{ item.href }}">{{ item.label }}</a>
   {%- endfor %}
@@ -106,7 +106,7 @@
 
 {%- comment -%} ─── 푸터 (front matter에 footer/home_link이 있을 때만) ─── {%- endcomment -%}
 {%- if page.footer or page.home_link %}
-<footer class="study-footer">
+<footer class="research-footer">
   {%- if page.footer %}{{ page.footer }}{% endif %}
   {%- if page.home_link %}
   <a class="home-link" href="{{ '/' | relative_url }}">← {{ site.title }} 홈으로</a>
@@ -120,7 +120,7 @@
 {%- endunless %}
 
 {%- unless page.core_js == false %}
-<script src="{{ '/assets/js/study.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/research.js' | relative_url }}"></script>
 {%- endunless %}
 {%- if page.scripts %}
 {%- for src in page.scripts %}

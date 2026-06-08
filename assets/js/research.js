@@ -1,5 +1,5 @@
 /* =========================================================================
-   study.js — 연구 인터랙티브 문서 공통 스크립트
+   research.js — 연구 인터랙티브 문서 공통 스크립트
    -------------------------------------------------------------------------
    문서 내용과 무관한 공통 인터랙션만 담습니다. (특정 차트·데이터 로직은
    각 문서의 인라인 <script>에서 따로 작성하세요.)
@@ -60,7 +60,7 @@
   /* 3. sticky 내비게이션 — 현재 섹션 활성화 + 오프셋 스무스 스크롤          */
   /* --------------------------------------------------------------------- */
   function initNav() {
-    var nav = document.querySelector('nav.study-nav');
+    var nav = document.querySelector('nav.research-nav');
     if (!nav) return;
     var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
     if (!links.length) return;

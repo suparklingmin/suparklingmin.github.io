@@ -6,7 +6,7 @@
 # 미리보기는 /ko/research/template/ 에서 볼 수 있습니다.
 # ===========================================================================
 title: "연구 문서 템플릿 · 컴포넌트 모음"
-description: "study 레이아웃으로 새 연구 인터랙티브 문서를 만들 때 쓰는 템플릿이자 컴포넌트 견본입니다."
+description: "research 레이아웃으로 새 연구 인터랙티브 문서를 만들 때 쓰는 템플릿이자 컴포넌트 견본입니다."
 unlisted: true          # /ko/research/ 공개 목록에는 숨김 (직접 URL로는 접근 가능)
 theme: dalda            # default | dalda | gui
 chart: true             # Chart.js가 필요하면 true
@@ -16,7 +16,7 @@ hero:
   word: "연구"
   headline: "새로운 연구 문서를<br>이렇게 만듭니다"
   subtitle: >
-    이 문서는 <b>study 레이아웃</b>의 모든 컴포넌트를 한자리에 보여 줍니다.<br>
+    이 문서는 <b>research 레이아웃</b>의 모든 컴포넌트를 한자리에 보여 줍니다.<br>
     front matter와 섹션 HTML을 고쳐 새 연구 문서를 빠르게 만드세요.
   citation: "박수민 · 전산언어학 · 견본 문서"
   scrolldown: true
@@ -30,7 +30,7 @@ nav:
 
 home_link: true
 footer: >
-  이 페이지는 <b>study 레이아웃</b> 견본입니다.<br>
+  이 페이지는 <b>research 레이아웃</b> 견본입니다.<br>
   새 문서를 만들 때 <code>_research/template.md</code>를 복사하세요.
 ---
 

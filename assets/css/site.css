@@ -2,7 +2,7 @@
    site.css — minima 기반 페이지(홈·소개·연구목록)를 연구 문서 톤으로
    -------------------------------------------------------------------------
    minima 테마의 main.css 뒤(custom-head.html)에서 로드되어 본문 영역을
-   study 문서와 같은 종이/잉크 분위기로 덮어씁니다. 헤더/푸터는 study-chrome.css.
+   research 문서와 같은 종이/잉크 분위기로 덮어씁니다. 헤더/푸터는 research-chrome.css.
    ========================================================================= */
 
 :root{
@@ -64,21 +64,21 @@ blockquote p:last-child{
 .home blockquote{font-size:clamp(1.1rem,2.6vw,1.35rem)}
 
 /* ── 연구 문서 목록 (research.md) ───────────────────────────────── */
-.study-index{list-style:none; padding:0; margin:1.6rem 0; display:grid; gap:1rem}
-.study-index li{
+.research-index{list-style:none; padding:0; margin:1.6rem 0; display:grid; gap:1rem}
+.research-index li{
   background:var(--card); border:1px solid var(--line); border-radius:14px;
   padding:1.2rem 1.4rem; transition:transform .15s, box-shadow .15s, border-color .15s;
 }
-.study-index li:hover{
+.research-index li:hover{
   transform:translateY(-2px); box-shadow:0 10px 30px rgba(80,60,20,.08);
   border-color:var(--accent-soft);
 }
-.study-index li a{
+.research-index li a{
   font-family:var(--serif); font-size:1.18rem; font-weight:700;
   color:var(--ink); text-decoration:none;
 }
-.study-index li:hover a{color:var(--accent)}
-.study-index li small{
+.research-index li:hover a{color:var(--accent)}
+.research-index li small{
   display:block; margin-top:.45rem; font-family:var(--sans);
   font-size:.85rem; color:var(--ink2); line-height:1.7;
 }

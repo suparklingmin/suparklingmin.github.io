@@ -1,5 +1,5 @@
 /* =========================================================================
-   study.css — 연구 인터랙티브 문서 공통 디자인 시스템
+   research.css — 연구 인터랙티브 문서 공통 디자인 시스템
    -------------------------------------------------------------------------
    gwi.html(조선왕조실록 鬼)과 dalda.html('달다' 분포 변화)에서 공통 패턴을
    추출해 재사용 가능한 토큰·컴포넌트로 정리한 스타일시트입니다.
@@ -8,8 +8,8 @@
      <html data-theme="dalda">  처럼 테마를 지정하면 색 팔레트가 바뀝니다.
      기본(default)·dalda(꿀빛)·gui(주칠/금) 세 가지 테마를 제공합니다.
 
-   레이아웃: _layouts/study.html
-   스크립트: assets/js/study.js
+   레이아웃: _layouts/research.html
+   스크립트: assets/js/research.js
    ========================================================================= */
 
 /* ----------------------------------------------------------------------- */
@@ -97,7 +97,7 @@ em.q{color:var(--accent); font-style:normal; font-weight:600}
 .sans{font-family:var(--sans)}
 hr.hr,.hr{height:1px; background:var(--rule); border:0; margin:0 auto; max-width:var(--maxw)}
 
-/* 스크롤 진행 막대 (study.js가 width를 조절) */
+/* 스크롤 진행 막대 (research.js가 width를 조절) */
 #progress{
   position:fixed; top:0; left:0; height:4px; width:0; z-index:100;
   background:linear-gradient(90deg,var(--accent-soft),var(--accent));
@@ -151,18 +151,18 @@ hr.hr,.hr{height:1px; background:var(--rule); border:0; margin:0 auto; max-width
 /* ----------------------------------------------------------------------- */
 /* 4. 내비게이션 (sticky)                                                   */
 /* ----------------------------------------------------------------------- */
-nav.study-nav{
+nav.research-nav{
   position:sticky; top:0; z-index:50;
   background:color-mix(in srgb,var(--paper) 92%,transparent);
   backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
 }
-nav.study-nav .inner{
+nav.research-nav .inner{
   max-width:var(--maxw-wide); margin:0 auto; display:flex; flex-wrap:wrap;
   gap:2px 18px; padding:11px 24px; font-family:var(--sans); font-size:13.5px;
 }
-nav.study-nav a{color:var(--ink2); white-space:nowrap; text-decoration:none}
-nav.study-nav a:hover{color:var(--accent)}
-nav.study-nav a.active{color:var(--accent); font-weight:700}
+nav.research-nav a{color:var(--ink2); white-space:nowrap; text-decoration:none}
+nav.research-nav a:hover{color:var(--accent)}
+nav.research-nav a.active{color:var(--accent); font-weight:700}
 
 /* ----------------------------------------------------------------------- */
 /* 5. 섹션 / 키커                                                           */
@@ -338,7 +338,7 @@ table.heat-tbl td.zero{background:#f0e9da!important; color:#c4b89a}
 }
 
 /* ----------------------------------------------------------------------- */
-/* 17. 툴팁 (study.js가 위치·내용 제어)                                     */
+/* 17. 툴팁 (research.js가 위치·내용 제어)                                     */
 /* ----------------------------------------------------------------------- */
 .tooltip{position:fixed; z-index:99; max-width:300px; background:#241c17; color:#f4ece0;
   font-family:var(--sans); font-size:13.5px; line-height:1.55; padding:10px 13px;
@@ -351,10 +351,10 @@ table.heat-tbl td.zero{background:#f0e9da!important; color:#c4b89a}
 /* ----------------------------------------------------------------------- */
 /* 18. 푸터                                                                 */
 /* ----------------------------------------------------------------------- */
-footer.study-footer{text-align:center; padding:3rem 1.5rem 4rem; font-family:var(--sans);
+footer.research-footer{text-align:center; padding:3rem 1.5rem 4rem; font-family:var(--sans);
   font-size:.82rem; color:var(--ink2); line-height:1.9}
-footer.study-footer a{color:var(--accent)}
-footer.study-footer .home-link{display:inline-block; margin-top:1.2rem; font-weight:700}
+footer.research-footer a{color:var(--accent)}
+footer.research-footer .home-link{display:inline-block; margin-top:1.2rem; font-weight:700}
 
 /* ----------------------------------------------------------------------- */
 /* 19. 반응형                                                               */
@@ -366,9 +366,9 @@ footer.study-footer .home-link{display:inline-block; margin-top:1.2rem; font-wei
 @media(max-width:600px){
   body{font-size:16px}
   section{padding:3.5rem 1.2rem}
-  nav.study-nav .inner{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+  nav.research-nav .inner{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
     gap:0 16px; padding:10px 16px; scrollbar-width:none}
-  nav.study-nav .inner::-webkit-scrollbar{display:none}
+  nav.research-nav .inner::-webkit-scrollbar{display:none}
   .toggle{display:flex; width:100%}
   .toggle button{flex:1; padding:10px 8px; font-size:13px}
 }

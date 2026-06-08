@@ -6,12 +6,12 @@ permalink: /ko/research/
 
 {{ site.data.i18n.ko.research_intro }}
 
-<ul class="study-index">
-{% for study in site.research %}
-  {% unless study.unlisted %}
+<ul class="research-index">
+{% for doc in site.research %}
+  {% unless doc.unlisted %}
   <li>
-    <a href="{{ study.url | relative_url }}">{{ study.title }}</a>
-    {% if study.description %}<br><small>{{ study.description | strip_html | truncate: 100 }}</small>{% endif %}
+    <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
+    {% if doc.description %}<br><small>{{ doc.description | strip_html | truncate: 100 }}</small>{% endif %}
   </li>
   {% endunless %}
 {% endfor %}
