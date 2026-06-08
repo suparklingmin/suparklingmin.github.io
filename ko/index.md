@@ -1,5 +1,6 @@
 ---
 layout: home
+title: "달과 고기를 구별하기"
 permalink: /ko/
 ---
 

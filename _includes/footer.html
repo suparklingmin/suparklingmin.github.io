@@ -16,6 +16,6 @@
     <a href="{{ about | relative_url }}">{{ t.nav.about }}</a>
   </nav>
   <div class="site-footer__meta">
-    © {{ site.time | date: "%Y" }} {{ site.author.name }}{% if site.author.email %} · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>{% endif %}
+    © {{ site.time | date: "%Y" }} {{ t.author | default: site.author.name }}{% if site.author.email %} · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>{% endif %}
   </div>
 </div></footer>

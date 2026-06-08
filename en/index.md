@@ -1,5 +1,6 @@
 ---
 layout: home
+title: "Telling the Moon from the Meat"
 permalink: /en/
 ---
 

@@ -3,6 +3,8 @@
 #   헤더/푸터 크롬은 _includes/header.html · footer.html 에서 참조합니다.
 ko:
   brand: "달과 고기를 구별하기"
+  tagline: "전산언어학자 박수민의 개인 사이트"
+  author: "박수민"
   nav:
     home: "홈"
     studies: "연구"
@@ -13,6 +15,8 @@ ko:
 
 en:
   brand: "Telling the Moon from the Meat"
+  tagline: "Personal site of Sumin Park, computational linguist"
+  author: "Sumin Park"
   nav:
     home: "Home"
     studies: "Studies"

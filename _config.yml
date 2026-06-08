@@ -118,11 +118,12 @@ defaults:
       path: "ko"
     values:
       lang: ko
-  # 영어 페이지
+  # 영어 페이지 — seo(jekyll-seo-tag) 작성자 메타도 영문 이름으로
   - scope:
       path: "en"
     values:
       lang: en
+      author: "Sumin Park"
   # 연구 인터랙티브 문서 — 한국어, 언어 전환 시 영어 연구 안내 페이지로
   - scope:
       path: ""

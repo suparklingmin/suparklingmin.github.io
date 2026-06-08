@@ -1,0 +1,29 @@
+{%- comment -%}
+  minima의 head.html 로컬 오버라이드(원본: jekyll/minima@d4d779a).
+  유일한 변경점: <title>을 page.lang에 따라 직접 만들고(_data/i18n.yml의 brand/tagline),
+  jekyll-seo-tag에는 `title=false`를 줘 제목만 끄고 나머지 메타는 그대로 쓴다.
+  이렇게 하지 않으면 영문 페이지에서도 전역 site.title(한국어)이 탭 제목에 붙는다.
+{%- endcomment -%}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- assign lang = page.lang | default: site.lang | default: 'ko' -%}
+  {%- assign t = site.data.i18n[lang] -%}
+  {%- comment -%} 홈(page.title이 브랜드와 같음)은 "브랜드 | 부제", 그 외는 "페이지 | 브랜드" {%- endcomment -%}
+  {%- if page.title and page.title != t.brand -%}
+  <title>{{ page.title | escape }} | {{ t.brand | escape }}</title>
+  {%- else -%}
+  <title>{{ t.brand | escape }}{% if t.tagline %} | {{ t.tagline | escape }}{% endif %}</title>
+  {%- endif -%}
+  {%- seo title=false -%}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+
+  {%- include custom-head.html -%}
+
+</head>
