@@ -1,11 +1,12 @@
 ---
-title: "Computational Linguistics"
+title: "컴퓨터언어학"
+title_en: "Computational Linguistics"
 regular: true
 date: 2022-03-01
 description: "PyTorch로 자연어처리 딥러닝 기법을 다루는 학부 전공필수 (서울대 언어학과)"
 ---
 
-서울대학교 언어학과 학부 **전공필수** 과목입니다. (과목번호 108.413A · 강사)
+*Computational Linguistics* · 서울대학교 언어학과 학부 **전공필수** (과목번호 108.413A · 강사)
 
 PyTorch 실습과 함께 자연어처리의 딥러닝 기법을 탐구합니다.
 

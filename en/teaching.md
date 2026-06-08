@@ -17,7 +17,7 @@ permalink: /en/teaching/
 <ul class="teaching-index">
 {% for c in regular %}{% unless c.unlisted %}
   <li>
-    <a href="{{ c.url | relative_url }}" hreflang="ko">{{ c.title }}</a>
+    <a href="{{ c.url | relative_url }}" hreflang="ko">{{ c.title_en | default: c.title }}</a>
     {% if c.description %}<br><small>{{ c.description | strip_html }}</small>{% endif %}
   </li>
 {% endunless %}{% endfor %}
@@ -30,7 +30,7 @@ permalink: /en/teaching/
 <ul class="teaching-index">
 {% for c in nonreg %}{% unless c.unlisted %}
   <li>
-    <a href="{{ c.url | relative_url }}" hreflang="ko">{{ c.title }}</a>
+    <a href="{{ c.url | relative_url }}" hreflang="ko">{{ c.title_en | default: c.title }}</a>
     {% if c.description %}<br><small>{{ c.description | strip_html }}</small>{% endif %}
   </li>
 {% endunless %}{% endfor %}

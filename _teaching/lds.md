@@ -1,11 +1,12 @@
 ---
-title: "Linguistics and Data Science"
+title: "언어데이터과학"
+title_en: "Linguistics and Data Science"
 regular: true
 date: 2024-09-01
 description: "언어 연구에 쓰는 데이터 분석 기법을 다루는 학부 전공선택 (서울대 언어학과)"
 ---
 
-서울대학교 언어학과 학부 **전공선택** 과목입니다. (과목번호 M1246.001400 · 강사)
+*Linguistics and Data Science* · 서울대학교 언어학과 학부 **전공선택** (과목번호 M1246.001400 · 강사)
 
 언어학 여러 분야의 연구에 활용할 수 있는 데이터 분석 기법을 가르칩니다.
 
