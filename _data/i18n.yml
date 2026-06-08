@@ -10,7 +10,7 @@ ko:
     studies: "연구"
     about: "소개"
   # 헤더의 언어 전환 링크에 보일 '상대 언어' 이름
-  switch: "EN"
+  switch: "English"
   studies_intro: "연구 내용을 인터랙티브 웹 문서로 정리한 모음입니다."
 
 en:
