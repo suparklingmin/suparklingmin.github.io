@@ -1,6 +1,6 @@
 ---
 title: "KR-SBERT"
-description: "한국어 문장 임베딩(Sentence-BERT) 모델 · 768차원"
+description: "한국어 문장 임베딩 모델"
 ---
 
 **KR-SBERT**는 한국어에 특화된 Sentence-BERT 문장 임베딩 모델입니다. 문장이나 단락을
@@ -14,7 +14,6 @@ description: "한국어 문장 임베딩(Sentence-BERT) 모델 · 768차원"
   임베딩을 만듭니다.
 - 40K 어휘(V40K) 모델을 기반으로 **KLUE-NLI**와 증강 **STS**(klueNLI-augSTS) 데이터로
   미세조정했습니다.
-- 문서 분류 튜토리얼 기준 정확도 **0.8628**로, 공개된 KR-SBERT 변형들 가운데 가장 높습니다.
 
 ## 사용법
 
@@ -39,11 +38,20 @@ print(embeddings)
 
 ```bibtex
 @misc{kr-sbert,
-  author       = {Park, Suzi and Shin, Hyopil},
-  title        = {KR-SBERT: A Pre-trained Korean-specific Sentence-BERT model},
-  year         = {2021},
-  publisher    = {GitHub},
-  journal      = {GitHub repository},
-  howpublished = {\url{https://github.com/snunlp/KR-SBERT}}
+  author    = {Park, Suzi and Shin, Hyopil},
+  title     = {KR-SBERT: A Pre-trained Korean-specific Sentence-BERT model},
+  year      = {2021},
+  publisher = {GitHub},
+  journal   = {GitHub repository},
+  url       = {https://github.com/snunlp/KR-SBERT}
+}
+
+@phdthesis{park2021fusion,
+  author = {Park, Suzi},
+  title  = {Fusion models for news quality prediction: Combining textual features with sentence embeddings},
+  school = {Department of Linguistics, Seoul National University},
+  year   = {2021},
+  type   = {Ph.D. dissertation},
+  url    = {https://s-space.snu.ac.kr/handle/10371/177766},
 }
 ```
