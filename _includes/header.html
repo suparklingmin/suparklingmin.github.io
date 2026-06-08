@@ -17,14 +17,33 @@
 {%- assign teaching = base | append: '/teaching/' -%}
 {%- assign about = base | append: '/about/' -%}
 {%- if page.alt_url -%}{%- assign alt = page.alt_url -%}{%- else -%}{%- assign alt = page.url | replace_first: base, otherbase -%}{%- endif -%}
+{%- comment -%}
+  모바일에서는 상단 줄에 [제목 · 언어전환 · 햄버거]만 두고, 페이지 링크(홈/연구/…)는
+  햄버거(.site-header__toggle)로 펼친다. 토글은 .site-header에 .is-open을 붙인다.
+  데스크톱(>720px)에서는 토글을 숨기고 모든 링크를 인라인으로 보인다.
+{%- endcomment -%}
 <header class="site-header"><div class="site-header__inner">
   <a class="site-header__brand" href="{{ home | relative_url }}">{{ t.brand | escape }}</a>
-  <nav class="site-header__nav">
+  <nav class="site-header__nav" id="site-menu">
     <a href="{{ home | relative_url }}"{% if page.url == home %} aria-current="page"{% endif %}>{{ t.nav.home }}</a>
     <a href="{{ research | relative_url }}"{% if page.url contains research %} aria-current="page"{% endif %}>{{ t.nav.research }}</a>
     <a href="{{ resources | relative_url }}"{% if page.url contains resources %} aria-current="page"{% endif %}>{{ t.nav.resources }}</a>
     <a href="{{ teaching | relative_url }}"{% if page.url contains teaching %} aria-current="page"{% endif %}>{{ t.nav.teaching }}</a>
     <a href="{{ about | relative_url }}"{% if page.url contains about %} aria-current="page"{% endif %}>{{ t.nav.about }}</a>
-    <a class="site-header__lang" href="{{ alt | relative_url }}" hreflang="{{ other }}" rel="alternate">{{ t.switch }}</a>
   </nav>
+  <a class="site-header__lang" href="{{ alt | relative_url }}" hreflang="{{ other }}" rel="alternate">{{ t.switch }}</a>
+  <button class="site-header__toggle" type="button" aria-label="{{ t.menu | default: 'Menu' }}" aria-controls="site-menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </div></header>
+<script>
+(function () {
+  var hdr = document.querySelector('.site-header');
+  var btn = hdr && hdr.querySelector('.site-header__toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var open = hdr.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>

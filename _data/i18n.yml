@@ -3,7 +3,7 @@
 #   헤더/푸터 크롬은 _includes/header.html · footer.html 에서 참조합니다.
 ko:
   brand: "달과 고기를 구별하기"
-  tagline: "전산언어학자 박수민의 개인 사이트"
+  tagline: "전산언어학 연구자 박수민의 개인 사이트"
   author: "박수민"
   nav:
     home: "홈"
@@ -13,6 +13,8 @@ ko:
     about: "소개"
   # 헤더의 언어 전환 링크에 보일 '상대 언어' 이름
   switch: "English"
+  # 모바일 햄버거 버튼 접근성 라벨
+  menu: "메뉴"
   research_intro: "연구 내용을 인터랙티브 웹 문서로 정리한 모음입니다."
   resources_intro: "직접 만들어 공개한 언어 자원(모델·사전) 모음입니다."
   teaching_intro: "서울대학교에서 진행한 강의 과목입니다."
@@ -30,6 +32,7 @@ en:
     teaching: "Teaching"
     about: "About"
   switch: "한국어"
+  menu: "Menu"
   research_intro: "A collection of research presented as interactive web documents."
   # 인터랙티브 문서는 아직 한국어판만 있습니다.
   research_ko_only: "These interactive documents are currently available in Korean only."
