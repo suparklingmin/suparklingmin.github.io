@@ -6,13 +6,13 @@
 {%- assign t = site.data.i18n[lang] -%}
 {%- assign base = '/' | append: lang -%}
 {%- assign home = base | append: '/' -%}
-{%- assign studies = base | append: '/studies/' -%}
+{%- assign research = base | append: '/research/' -%}
 {%- assign about = base | append: '/about/' -%}
 <footer class="site-footer"><div class="site-footer__inner">
   <div class="site-footer__brand">{{ t.brand | escape }}</div>
   <nav class="site-footer__nav">
     <a href="{{ home | relative_url }}">{{ t.nav.home }}</a>
-    <a href="{{ studies | relative_url }}">{{ t.nav.studies }}</a>
+    <a href="{{ research | relative_url }}">{{ t.nav.research }}</a>
     <a href="{{ about | relative_url }}">{{ t.nav.about }}</a>
   </nav>
   <div class="site-footer__meta">

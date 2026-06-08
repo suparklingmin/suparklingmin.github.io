@@ -102,14 +102,15 @@ lang: ko
 #   헤더/푸터 크롬은 page.lang으로 _data/i18n.yml 문자열을 골라 씁니다.
 baseurl: ""
 
-# 연구 인터랙티브 문서 컬렉션
+# 연구(research) 인터랙티브 문서 컬렉션
 # --------------------------
-#   _studies/ 안의 각 문서는 `layout: study`를 쓰며 /ko/studies/<이름>/ 으로 출력됩니다.
-#   현재 인터랙티브 문서는 한국어판만 있습니다(영어는 /en/studies/에 안내만).
+#   _research/ 안의 각 문서는 `layout: study`를 쓰며 /ko/research/<이름>/ 으로 출력됩니다.
+#   (단수 `study`는 '연구 문서 한 편'을 가리키는 내부 레이아웃·자산 이름입니다.)
+#   현재 인터랙티브 문서는 한국어판만 있습니다(영어는 /en/research/에 안내만).
 collections:
-  studies:
+  research:
     output: true
-    permalink: /ko/studies/:name/
+    permalink: /ko/research/:name/
 
 # 폴더별 기본값(언어) · 컬렉션 문서 기본값
 defaults:
@@ -127,9 +128,9 @@ defaults:
   # 연구 인터랙티브 문서 — 한국어, 언어 전환 시 영어 연구 안내 페이지로
   - scope:
       path: ""
-      type: studies
+      type: research
     values:
       layout: study
       lang: ko
-      alt_url: /en/studies/
+      alt_url: /en/research/
       excerpt_separator: ""

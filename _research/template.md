@@ -1,13 +1,13 @@
 ---
 # ===========================================================================
 # 새 연구 문서 템플릿 — 이 파일을 복사해서 시작하세요.
-#   cp _studies/template.md _studies/내연구.md
+#   cp _research/template.md _research/내연구.md
 # 그 다음 front matter와 아래 섹션들을 내용에 맞게 고치면 됩니다.
-# 미리보기는 /studies/template/ 에서 볼 수 있습니다.
+# 미리보기는 /ko/research/template/ 에서 볼 수 있습니다.
 # ===========================================================================
 title: "연구 문서 템플릿 · 컴포넌트 모음"
 description: "study 레이아웃으로 새 연구 인터랙티브 문서를 만들 때 쓰는 템플릿이자 컴포넌트 견본입니다."
-unlisted: true          # /studies/ 공개 목록에는 숨김 (직접 URL로는 접근 가능)
+unlisted: true          # /ko/research/ 공개 목록에는 숨김 (직접 URL로는 접근 가능)
 theme: dalda            # default | dalda | gui
 chart: true             # Chart.js가 필요하면 true
 
@@ -31,7 +31,7 @@ nav:
 home_link: true
 footer: >
   이 페이지는 <b>study 레이아웃</b> 견본입니다.<br>
-  새 문서를 만들 때 <code>_studies/template.md</code>를 복사하세요.
+  새 문서를 만들 때 <code>_research/template.md</code>를 복사하세요.
 ---
 
 {%- comment -%}

@@ -63,7 +63,7 @@ blockquote p:last-child{
 .home{min-height:46vh; display:flex; flex-direction:column; justify-content:center}
 .home blockquote{font-size:clamp(1.1rem,2.6vw,1.35rem)}
 
-/* ── 연구 문서 목록 (studies.md) ────────────────────────────────── */
+/* ── 연구 문서 목록 (research.md) ───────────────────────────────── */
 .study-index{list-style:none; padding:0; margin:1.6rem 0; display:grid; gap:1rem}
 .study-index li{
   background:var(--card); border:1px solid var(--line); border-radius:14px;

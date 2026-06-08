@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "Studies"
-permalink: /en/studies/
+title: "Research"
+permalink: /en/research/
 ---
 
-{{ site.data.i18n.en.studies_intro }}
+{{ site.data.i18n.en.research_intro }}
 
-<p><em>{{ site.data.i18n.en.studies_ko_only }}</em></p>
+<p><em>{{ site.data.i18n.en.research_ko_only }}</em></p>
 
 <ul class="study-index">
-{% for study in site.studies %}
+{% for study in site.research %}
   {% unless study.unlisted %}
   <li>
     <a href="{{ study.url | relative_url }}" hreflang="ko">{{ study.title }}</a>

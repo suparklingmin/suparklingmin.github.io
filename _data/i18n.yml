@@ -7,11 +7,11 @@ ko:
   author: "박수민"
   nav:
     home: "홈"
-    studies: "연구"
+    research: "연구"
     about: "소개"
   # 헤더의 언어 전환 링크에 보일 '상대 언어' 이름
   switch: "English"
-  studies_intro: "연구 내용을 인터랙티브 웹 문서로 정리한 모음입니다."
+  research_intro: "연구 내용을 인터랙티브 웹 문서로 정리한 모음입니다."
 
 en:
   brand: "Telling the Moon from the Meat"
@@ -19,9 +19,9 @@ en:
   author: "Sumin Park"
   nav:
     home: "Home"
-    studies: "Studies"
+    research: "Research"
     about: "About"
   switch: "한국어"
-  studies_intro: "A collection of research presented as interactive web documents."
+  research_intro: "A collection of research presented as interactive web documents."
   # 인터랙티브 문서는 아직 한국어판만 있습니다.
-  studies_ko_only: "These interactive documents are currently available in Korean only."
+  research_ko_only: "These interactive documents are currently available in Korean only."
