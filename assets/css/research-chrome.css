@@ -26,6 +26,7 @@
   font-family:"Noto Serif KR",serif; font-weight:700; font-size:1rem;
   color:#2a2420; text-decoration:none; margin-right:auto; letter-spacing:-.01em;
 }
+.site-header__brand:visited{color:#2a2420}   /* :visited 기본 파랑/보라 방지 */
 .site-header__brand:hover{color:var(--accent,#9a6510)}
 .site-header__nav{display:flex; gap:1.1rem; flex-wrap:wrap}
 .site-header__nav a,
@@ -33,6 +34,8 @@
   font-size:.86rem; color:#5b5147; text-decoration:none; font-weight:500;
   white-space:nowrap; transition:color .15s;
 }
+.site-header__nav a:visited,
+.site-header__lang:visited{color:#5b5147}   /* :visited 기본 파랑/보라 방지 */
 .site-header__nav a:hover,
 .site-header__nav a[aria-current],
 .site-header__lang:hover{color:var(--accent,#9a6510)}
@@ -67,9 +70,11 @@
 }
 .site-footer__nav{display:flex; gap:1rem; flex-wrap:wrap; justify-content:center}
 .site-footer__nav a{color:#cbbfae; text-decoration:none; font-size:.86rem; transition:color .15s}
+.site-footer__nav a:visited{color:#cbbfae}
 .site-footer__nav a:hover{color:#fff}
 .site-footer__meta{font-size:.78rem; color:#9a8f80; line-height:1.8}
 .site-footer__meta a{color:#9a8f80; text-decoration:none}
+.site-footer__meta a:visited{color:#9a8f80}
 .site-footer__meta a:hover{color:#cbbfae}
 
 /* ── 모바일: 제목 · 언어전환 · 햄버거만 한 줄에, 나머지 링크는 접기 ─── */
