@@ -85,9 +85,15 @@ blockquote p:last-child{
 
 /* ── 코드 ───────────────────────────────────────────────────────── */
 code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em}
-.post-content code{background:var(--paper2); border-radius:4px; padding:.1em .35em; color:var(--accent)}
-.post-content pre{background:#241c17; color:#f4ece0; border-radius:10px; padding:1rem 1.2rem; overflow:auto}
+.post-content code{background:var(--paper2); border:0; border-radius:4px; padding:.1em .35em; color:var(--accent)}
+.post-content pre{background:#241c17; color:#f4ece0; border:0; border-radius:10px; padding:1rem 1.2rem; overflow:auto}
 .post-content pre code{background:none; color:inherit; padding:0}
+/* Rouge 신택스 하이라이트 블록도 같은 어두운 톤으로 통일.
+   minima solarized 스킨의 `.highlighter-rouge .highlight`(밝은 배경)가
+   specificity로 위 .post-content pre를 이기므로 더 강한 선택자로 덮어쓴다. */
+.post-content .highlighter-rouge .highlight,
+.post-content pre.highlight{background:#241c17; border:0; border-radius:10px}
+.post-content .highlight{color:#f4ece0}            /* 색 지정 없는 일반 토큰을 밝게(색 있는 토큰은 자기 색 유지) */
 
 @media(max-width:600px){
   .page-content{padding:2.4rem 0 3rem}
