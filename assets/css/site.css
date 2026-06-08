@@ -63,22 +63,22 @@ blockquote p:last-child{
 .home{min-height:46vh; display:flex; flex-direction:column; justify-content:center}
 .home blockquote{font-size:clamp(1.1rem,2.6vw,1.35rem)}
 
-/* ── 연구 문서 목록 (research.md) ───────────────────────────────── */
-.research-index{list-style:none; padding:0; margin:1.6rem 0; display:grid; gap:1rem}
-.research-index li{
+/* ── 카드형 목록 (research.md · resources.md 공용) ───────────────── */
+.research-index,.resource-index{list-style:none; padding:0; margin:1.6rem 0; display:grid; gap:1rem}
+.research-index li,.resource-index li{
   background:var(--card); border:1px solid var(--line); border-radius:14px;
   padding:1.2rem 1.4rem; transition:transform .15s, box-shadow .15s, border-color .15s;
 }
-.research-index li:hover{
+.research-index li:hover,.resource-index li:hover{
   transform:translateY(-2px); box-shadow:0 10px 30px rgba(80,60,20,.08);
   border-color:var(--accent-soft);
 }
-.research-index li a{
+.research-index li a,.resource-index li a{
   font-family:var(--serif); font-size:1.18rem; font-weight:700;
   color:var(--ink); text-decoration:none;
 }
-.research-index li:hover a{color:var(--accent)}
-.research-index li small{
+.research-index li:hover a,.resource-index li:hover a{color:var(--accent)}
+.research-index li small,.resource-index li small{
   display:block; margin-top:.45rem; font-family:var(--sans);
   font-size:.85rem; color:var(--ink2); line-height:1.7;
 }

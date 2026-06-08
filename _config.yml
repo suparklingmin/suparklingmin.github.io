@@ -110,6 +110,11 @@ collections:
   research:
     output: true
     permalink: /ko/research/:name/
+  # 직접 만든 언어 자원(모델·사전) 컬렉션 — /ko/resources/<이름>/ 으로 출력.
+  #   research와 달리 인터랙티브 문서가 아니라 설명·링크 위주라 layout: page를 씀.
+  resources:
+    output: true
+    permalink: /ko/resources/:name/
 
 # 폴더별 기본값(언어) · 컬렉션 문서 기본값
 defaults:
@@ -133,3 +138,11 @@ defaults:
       lang: ko
       alt_url: /en/research/
       excerpt_separator: ""
+  # 언어 자원 — 한국어 설명 페이지, 언어 전환 시 영어 자료 안내 페이지로
+  - scope:
+      path: ""
+      type: resources
+    values:
+      layout: page
+      lang: ko
+      alt_url: /en/resources/
