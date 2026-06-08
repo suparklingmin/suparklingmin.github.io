@@ -3,7 +3,7 @@
 #   헤더/푸터 크롬은 _includes/header.html · footer.html 에서 참조합니다.
 ko:
   brand: "달과 고기를 구별하기"
-  tagline: "전산언어학 연구자 박수민의 개인 사이트"
+  tagline: "컴퓨터언어학 연구자 박수민의 개인 사이트"
   author: "박수민"
   nav:
     home: "홈"
@@ -17,9 +17,9 @@ ko:
   menu: "메뉴"
   research_intro: "연구 내용을 인터랙티브 웹 문서로 정리한 모음입니다."
   resources_intro: "직접 만들어 공개한 언어 자원(모델·사전) 모음입니다."
-  teaching_intro: "서울대학교에서 진행한 강의 과목입니다."
-  teaching_regular: "정규 강의"
-  teaching_nonregular: "비정규 강의"
+  teaching_intro: "지금까지 진행한 강의를 모았습니다."
+  teaching_regular: "학기 강좌"
+  teaching_nonregular: "단기 강좌"
 
 en:
   brand: "Telling the Moon from the Meat"
@@ -39,8 +39,8 @@ en:
   resources_intro: "Language resources (models and lexicons) I have built and released."
   # 자료 상세는 아직 한국어판만 있습니다.
   resources_ko_only: "Resource details are currently available in Korean only."
-  teaching_intro: "Courses I have taught at Seoul National University."
-  teaching_regular: "Regular Courses"
-  teaching_nonregular: "Non-regular Courses"
+  teaching_intro: "Courses and lectures I have taught."
+  teaching_regular: "Semester Courses"
+  teaching_nonregular: "Short Courses"
   # 강의 상세는 아직 한국어판만 있습니다.
   teaching_ko_only: "Course details are currently available in Korean only."
