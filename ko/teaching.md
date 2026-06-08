@@ -4,11 +4,33 @@ title: "강의"
 permalink: /ko/teaching/
 ---
 
-서울대학교 인문대학 디지털인문학(데이터과학) 연계전공에서 **인문학을 위한 데이터과학**을 가르치고 있습니다.
+{{ site.data.i18n.ko.teaching_intro }}
 
-<!-- 강의 과목 목록은 준비되는 대로 여기에 추가하세요. 예:
-## 강의 과목
+{%- assign regular = site.teaching | where_exp: "c", "c.regular" | sort: "date" | reverse -%}
+{%- assign nonreg = site.teaching | where_exp: "c", "c.regular != true" | sort: "date" | reverse -%}
 
-- **과목명** · 서울대학교 · 2025년 1학기 (강의)
-- **과목명** · 서울대학교 · 2024년 2학기 (강의)
--->
+{% if regular.size > 0 %}
+## {{ site.data.i18n.ko.teaching_regular }}
+
+<ul class="teaching-index">
+{% for c in regular %}{% unless c.unlisted %}
+  <li>
+    <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
+    {% if c.description %}<br><small>{{ c.description | strip_html }}</small>{% endif %}
+  </li>
+{% endunless %}{% endfor %}
+</ul>
+{% endif %}
+
+{% if nonreg.size > 0 %}
+## {{ site.data.i18n.ko.teaching_nonregular }}
+
+<ul class="teaching-index">
+{% for c in nonreg %}{% unless c.unlisted %}
+  <li>
+    <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
+    {% if c.description %}<br><small>{{ c.description | strip_html }}</small>{% endif %}
+  </li>
+{% endunless %}{% endfor %}
+</ul>
+{% endif %}

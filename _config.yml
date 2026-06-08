@@ -115,6 +115,10 @@ collections:
   resources:
     output: true
     permalink: /ko/resources/:name/
+  # 강의 컬렉션 — 과목 한 편이 문서 하나. /ko/teaching/<이름>/ 으로 출력.
+  teaching:
+    output: true
+    permalink: /ko/teaching/:name/
 
 # 폴더별 기본값(언어) · 컬렉션 문서 기본값
 defaults:
@@ -146,3 +150,11 @@ defaults:
       layout: page
       lang: ko
       alt_url: /en/resources/
+  # 강의 — 한국어 설명 페이지, 언어 전환 시 영어 강의 안내 페이지로
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: page
+      lang: ko
+      alt_url: /en/teaching/
