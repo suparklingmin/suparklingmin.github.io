@@ -52,7 +52,7 @@
   {%- endunless %}
   {%- if page.extra_css %}
   {%- for css in page.extra_css %}
-  <link rel="stylesheet" href="{{ css | relative_url }}">
+  <link rel="stylesheet" href="{{ css | relative_url }}?v={{ site.time | date: '%s' }}">
   {%- endfor %}
   {%- endif %}
   {%- if page.chart %}
@@ -124,7 +124,7 @@
 {%- endunless %}
 {%- if page.scripts %}
 {%- for src in page.scripts %}
-<script src="{{ src | relative_url }}"></script>
+<script src="{{ src | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 {%- endfor %}
 {%- endif %}
 </body>
