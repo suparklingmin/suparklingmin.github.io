@@ -2814,17 +2814,19 @@ document.addEventListener('click',()=>_tt.classList.remove('show'));
   const ch=echarts.init(document.getElementById('ladderChart'));
   ch.setOption({
     textStyle:{fontFamily:FONT_CJK},
-    grid:{left:60,right:30,top:24,bottom:54},
-    tooltip:{formatter:p=>`<b>${p.data.label}</b><br/>${p.data.note}`, extraCssText:'max-width:280px;white-space:normal'},
+    grid:{left:innerWidth<=600?44:60, right:innerWidth<=600?44:30, top:24, bottom:54},
+    tooltip:{formatter:p=>`<b>${p.data.txt}</b><br/>${p.data.note}`, extraCssText:'max-width:280px;white-space:normal'},
     xAxis:{name:'가로: 1차 공기 →', type:'value', min:0,max:1, interval:0.25, nameLocation:'middle', nameGap:30, nameTextStyle:{color:'#8a7f74',fontSize:12},
       axisLabel:{formatter:v=> v<=0?'안 만남':(v>=1?'자주 결합':''), color:'#8a7f74'}, splitLine:{lineStyle:{color:'#eee5d8'}}},
-    yAxis:{name:'세로: 의미 충실도 →', type:'value', min:0,max:1, interval:0.25, nameLocation:'middle', nameGap:40, nameTextStyle:{color:'#8a7f74',fontSize:12},
+    yAxis:{name:'세로: 의미 충실도 →', type:'value', min:0,max:1, interval:0.25, nameLocation:'middle', nameGap:innerWidth<=600?26:40, nameTextStyle:{color:'#8a7f74',fontSize:12},
       axisLabel:{formatter:v=> v<=0?'허사':(v>=1?'내용어':''), color:'#8a7f74'}, splitLine:{lineStyle:{color:'#eee5d8'}}},
     series:[{type:'scatter', symbolSize:46, data:L.cases.map(c=>({
-        value:[c.x,c.y], label:c.label, note:c.note,
+        value:[c.x,c.y], txt:c.label, note:c.note,
         itemStyle:{color:tone[c.tone], opacity:.9},
+        // 오른쪽에 가까운 점은 라벨이 잘리지 않도록 왼쪽으로 뒤집는다
+        label:{position:c.x>=0.55?'left':'right'},
         emphasis:{scale:1.15}})),
-      label:{show:true, formatter:p=>p.data.label.split(' ')[0], position:'right',
+      label:{show:true, formatter:p=>p.data.txt.split(' ')[0], position:'right',
         color:'#3a2a22', fontSize:15, fontFamily:FONT_CJK}}]
   });
   window.addEventListener('resize',()=>ch.resize());
