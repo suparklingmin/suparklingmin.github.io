@@ -1,0 +1,95 @@
+/* =========================================================================
+   site.css — minima 기반 페이지(홈·소개·연구목록)를 연구 문서 톤으로
+   -------------------------------------------------------------------------
+   minima 테마의 main.css 뒤(custom-head.html)에서 로드되어 본문 영역을
+   study 문서와 같은 종이/잉크 분위기로 덮어씁니다. 헤더/푸터는 study-chrome.css.
+   ========================================================================= */
+
+:root{
+  --paper:#f6efe2; --paper2:#efe6d3; --card:#fffdf9;
+  --ink:#2a2420; --ink2:#5b5147; --mut:#8a7f74; --line:#d8ccb4;
+  --accent:#9a6510; --accent-soft:#e8c987; --accent2:#6f8f80;
+  --serif:"Noto Serif KR",serif; --sans:"Noto Sans KR",sans-serif;
+  --maxw:760px;
+}
+
+/* ── 베이스 ─────────────────────────────────────────────────────── */
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--serif); line-height:1.85; word-break:keep-all;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent-soft)}
+
+.page-content{padding:3.5rem 0 4rem}
+.page-content .wrapper{max-width:var(--maxw); margin:0 auto; padding:0 1.5rem}
+
+a{color:var(--accent)}
+a:hover{color:var(--accent); text-decoration:underline}
+
+h1,h2,h3,h4{font-family:var(--serif); color:var(--ink); line-height:1.3; letter-spacing:-.01em}
+
+/* ── 페이지(소개·연구목록 등) ───────────────────────────────────── */
+.post-header{margin-bottom:1.8rem}
+.post-title,.post-list-heading{
+  font-size:clamp(1.9rem,5vw,2.6rem); font-weight:700; color:var(--ink);
+  margin:0; letter-spacing:-.02em;
+}
+.post-title::after{
+  content:""; display:block; width:48px; height:3px; margin-top:.9rem;
+  background:var(--accent); border-radius:2px;
+}
+.post-content{color:var(--ink2); font-size:1.06rem}
+.post-content p{margin:0 0 1.1rem}
+.post-content b,.post-content strong{color:var(--ink)}
+.post-content h2{font-size:1.6rem; margin:2.2rem 0 1rem}
+.post-content h3{font-size:1.25rem; margin:1.8rem 0 .8rem}
+.post-content hr{border:0; height:1px; background:var(--line); margin:2.5rem 0}
+
+/* ── 인용구(홈 화면 중심 문구 등) ───────────────────────────────── */
+blockquote{
+  font-family:var(--serif); color:var(--ink);
+  background:var(--card); border:0; border-left:4px solid var(--accent2);
+  border-radius:0 12px 12px 0; padding:1.4rem 1.8rem; margin:1.5rem 0;
+  font-size:1.12rem; line-height:1.9; font-style:normal;
+}
+blockquote p{margin:0 0 .8rem}
+blockquote p:last-child{
+  margin:.6rem 0 0; text-align:right; font-family:var(--sans);
+  font-size:.9rem; color:var(--mut);
+}
+
+/* 홈: 중심 인용을 화면 가운데로 여유 있게 */
+.home{min-height:46vh; display:flex; flex-direction:column; justify-content:center}
+.home blockquote{font-size:clamp(1.1rem,2.6vw,1.35rem)}
+
+/* ── 연구 문서 목록 (studies.md) ────────────────────────────────── */
+.study-index{list-style:none; padding:0; margin:1.6rem 0; display:grid; gap:1rem}
+.study-index li{
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:1.2rem 1.4rem; transition:transform .15s, box-shadow .15s, border-color .15s;
+}
+.study-index li:hover{
+  transform:translateY(-2px); box-shadow:0 10px 30px rgba(80,60,20,.08);
+  border-color:var(--accent-soft);
+}
+.study-index li a{
+  font-family:var(--serif); font-size:1.18rem; font-weight:700;
+  color:var(--ink); text-decoration:none;
+}
+.study-index li:hover a{color:var(--accent)}
+.study-index li small{
+  display:block; margin-top:.45rem; font-family:var(--sans);
+  font-size:.85rem; color:var(--ink2); line-height:1.7;
+}
+
+/* ── 코드 ───────────────────────────────────────────────────────── */
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em}
+.post-content code{background:var(--paper2); border-radius:4px; padding:.1em .35em; color:var(--accent)}
+.post-content pre{background:#241c17; color:#f4ece0; border-radius:10px; padding:1rem 1.2rem; overflow:auto}
+.post-content pre code{background:none; color:inherit; padding:0}
+
+@media(max-width:600px){
+  .page-content{padding:2.4rem 0 3rem}
+  blockquote{padding:1.1rem 1.3rem}
+}

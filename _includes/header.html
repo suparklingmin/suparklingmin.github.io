@@ -1,0 +1,26 @@
+{%- comment -%}
+  사이트 공통 상단 헤더. study 레이아웃과 minima 레이아웃(홈·소개·연구목록)이
+  함께 사용합니다. 스타일은 assets/css/study-chrome.css.
+
+  다국어: page.lang(ko|en)으로 _data/i18n.yml 의 문자열표(t)를 고르고, 링크는
+  언어 접두사(base = /ko 또는 /en)를 붙여 만듭니다. 맨 끝 항목은 상대 언어로
+  전환하는 링크(현재 URL의 접두사를 바꾼 alt, page.alt_url로 덮어쓸 수 있음).
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.lang | default: 'ko' -%}
+{%- if lang == 'en' -%}{%- assign other = 'ko' -%}{%- else -%}{%- assign other = 'en' -%}{%- endif -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign base = '/' | append: lang -%}
+{%- assign otherbase = '/' | append: other -%}
+{%- assign home = base | append: '/' -%}
+{%- assign studies = base | append: '/studies/' -%}
+{%- assign about = base | append: '/about/' -%}
+{%- if page.alt_url -%}{%- assign alt = page.alt_url -%}{%- else -%}{%- assign alt = page.url | replace_first: base, otherbase -%}{%- endif -%}
+<header class="site-header"><div class="site-header__inner">
+  <a class="site-header__brand" href="{{ home | relative_url }}">{{ t.brand | escape }}</a>
+  <nav class="site-header__nav">
+    <a href="{{ home | relative_url }}"{% if page.url == home %} aria-current="page"{% endif %}>{{ t.nav.home }}</a>
+    <a href="{{ studies | relative_url }}"{% if page.url contains studies %} aria-current="page"{% endif %}>{{ t.nav.studies }}</a>
+    <a href="{{ about | relative_url }}"{% if page.url contains about %} aria-current="page"{% endif %}>{{ t.nav.about }}</a>
+    <a class="site-header__lang" href="{{ alt | relative_url }}" hreflang="{{ other }}" rel="alternate">{{ t.switch }}</a>
+  </nav>
+</div></header>

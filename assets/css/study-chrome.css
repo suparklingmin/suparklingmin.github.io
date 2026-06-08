@@ -1,0 +1,64 @@
+/* =========================================================================
+   study-chrome.css — 연구 문서 공통 사이트 헤더/푸터
+   -------------------------------------------------------------------------
+   모든 study 페이지(관리형·자립형 모두)에 항상 로드되는 "사이트 껍데기"입니다.
+   문서 고유의 hero/콘텐츠 푸터와는 별개로, 사이트 내비게이션을 제공합니다.
+
+   · 배경/글자색은 고정 중립값을 써서 어떤 테마(밝은 종이/어두운 hero)에서도
+     안전하게 보이고, 강조(hover)에만 테마의 --accent를 폴백과 함께 사용합니다.
+   · 헤더는 sticky가 아닌 정적 바라서, 문서 자체의 sticky 내비와 겹치지 않습니다.
+   ========================================================================= */
+
+/* ── 상단 사이트 헤더 ─────────────────────────────────────────────── */
+.site-header{
+  font-family:"Noto Sans KR",sans-serif;
+  background:#fffdf9;
+  border-bottom:1px solid rgba(60,40,25,.10);
+  position:relative; z-index:60;
+  /* minima 테마 기본값 리셋 (홈·소개·연구목록 페이지에서 동일하게 보이도록) */
+  border-top:0; min-height:0; line-height:normal;
+}
+.site-header__inner{
+  max-width:1100px; margin:0 auto; padding:.7rem 1.5rem;
+  display:flex; align-items:center; gap:1.2rem;
+}
+.site-header__brand{
+  font-family:"Noto Serif KR",serif; font-weight:700; font-size:1rem;
+  color:#2a2420; text-decoration:none; margin-right:auto; letter-spacing:-.01em;
+}
+.site-header__brand:hover{color:var(--accent,#9a6510)}
+.site-header__nav{display:flex; gap:1.1rem; flex-wrap:wrap}
+.site-header__nav a{
+  font-size:.86rem; color:#5b5147; text-decoration:none; font-weight:500;
+  white-space:nowrap; transition:color .15s;
+}
+.site-header__nav a:hover,
+.site-header__nav a[aria-current]{color:var(--accent,#9a6510)}
+
+/* ── 하단 사이트 푸터 ─────────────────────────────────────────────── */
+.site-footer{
+  font-family:"Noto Sans KR",sans-serif;
+  background:#2a2420; color:#cbbfae;
+  /* minima 테마 기본값 리셋 */
+  border-top:0; padding:0;
+}
+.site-footer__inner{
+  max-width:1100px; margin:0 auto; padding:2.6rem 1.5rem;
+  display:flex; flex-direction:column; align-items:center; text-align:center; gap:.6rem;
+}
+.site-footer__brand{
+  font-family:"Noto Serif KR",serif; color:#f4ece0; font-size:1.05rem; font-weight:700;
+}
+.site-footer__nav{display:flex; gap:1rem; flex-wrap:wrap; justify-content:center}
+.site-footer__nav a{color:#cbbfae; text-decoration:none; font-size:.86rem; transition:color .15s}
+.site-footer__nav a:hover{color:#fff}
+.site-footer__meta{font-size:.78rem; color:#9a8f80; line-height:1.8}
+.site-footer__meta a{color:#9a8f80; text-decoration:none}
+.site-footer__meta a:hover{color:#cbbfae}
+
+@media(max-width:600px){
+  .site-header__inner{padding:.6rem 1.1rem; gap:.7rem}
+  .site-header__brand{font-size:.92rem}
+  .site-header__nav{gap:.8rem}
+  .site-header__nav a{font-size:.8rem}
+}

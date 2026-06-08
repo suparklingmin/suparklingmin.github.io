@@ -1,7 +1,29 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
+permalink: /
+sitemap: false
 ---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>달과 고기를 구별하기</title>
+<link rel="alternate" hreflang="ko" href="/ko/">
+<link rel="alternate" hreflang="en" href="/en/">
+<link rel="alternate" hreflang="x-default" href="/ko/">
+<script>
+  // 브라우저 선호 언어가 한국어면 /ko/, 아니면 /en/ 으로. (정적 호스팅이라 클라이언트에서 판별)
+  (function () {
+    var langs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
+    var isKo = false;
+    for (var i = 0; i < langs.length; i++) {
+      if ((langs[i] || '').toLowerCase().indexOf('ko') === 0) { isKo = true; break; }
+    }
+    location.replace(isKo ? '/ko/' : '/en/');
+  })();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=/ko/"></noscript>
+</head>
+<body>
+<p><a href="/ko/">한국어</a> · <a href="/en/">English</a></p>
+</body>
+</html>

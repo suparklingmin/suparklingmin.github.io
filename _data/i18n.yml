@@ -1,0 +1,23 @@
+# 사이트 다국어 문자열.
+#   언어 폴더(ko/ · en/)와 study 컬렉션이 page.lang으로 이 표를 골라 씁니다.
+#   헤더/푸터 크롬은 _includes/header.html · footer.html 에서 참조합니다.
+ko:
+  brand: "달과 고기를 구별하기"
+  nav:
+    home: "홈"
+    studies: "연구"
+    about: "소개"
+  # 헤더의 언어 전환 링크에 보일 '상대 언어' 이름
+  switch: "EN"
+  studies_intro: "연구 내용을 인터랙티브 웹 문서로 정리한 모음입니다."
+
+en:
+  brand: "Telling the Moon from the Meat"
+  nav:
+    home: "Home"
+    studies: "Studies"
+    about: "About"
+  switch: "한국어"
+  studies_intro: "A collection of research presented as interactive web documents."
+  # 인터랙티브 문서는 아직 한국어판만 있습니다.
+  studies_ko_only: "These interactive documents are currently available in Korean only."

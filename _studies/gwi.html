@@ -1,0 +1,135 @@
+---
+title: "조선왕조실록 속 鬼 — 450년의 의미 누적"
+description: "조선왕조실록 코퍼스의 시기별 Word2Vec 이웃 분석으로 본 한자어 '鬼'의 450년 의미 누적 과정을 시각화한 인터랙티브 웹 문서"
+theme: gui
+core_css: false
+core_js: false
+extra_css:
+  - /assets/css/gwi.css
+scripts:
+  - /assets/js/gwi.js
+---
+{% raw %}
+
+<header class="hero">
+  <div class="badge" id="previewBadge">미리보기</div>
+  <h1>조선왕조실록 속 <span class="gui han">鬼</span> — 450년의 의미 누적</h1>
+  <p class="sub" id="heroSub"></p>
+  <div class="qa">
+    <div class="q" id="heroQ"></div>
+    <div class="concl" id="heroConcl"></div>
+  </div>
+</header>
+
+<nav><div class="inner">
+  <a href="#story">01–03 시작</a>
+  <a href="#freq">04 빈도</a>
+  <a href="#explorer">05 이웃 탐색</a>
+  <a href="#accretion">06 누적</a>
+  <a href="#heatmap">07 시기 변화</a>
+  <a href="#ladder">08 신뢰도</a>
+  <a href="#cases">09 심화 사례</a>
+  <a href="#method">10 방법</a>
+</div></nav>
+
+<main>
+
+<section id="story" class="story">
+  <div class="sec-kicker" id="storyKicker"></div>
+  <div id="storyCards"></div>
+</section>
+
+<section id="freq" class="scard wide">
+  <div class="scard-head"><div class="scard-n">04</div><div>
+    <div class="scard-tag">빈도 추이</div>
+    <h2 class="scard-title"><span class="han">鬼</span>는 언제 많이 쓰였나 — 기록량 때문일까?</h2></div></div>
+  <p class="lead" id="freqLead"></p>
+  <div class="toggle" id="freqToggle"></div>
+  <div id="freqChart" class="chart" style="height:380px"></div>
+  <div class="note" id="freqInsight"></div>
+  <div class="cap" id="freqCaveat"></div>
+</section>
+
+<section id="explorer" class="scard wide">
+  <div class="scard-head"><div class="scard-n">05</div><div>
+    <div class="scard-tag">이웃 탐색기</div>
+    <h2 class="scard-title">시기별 <span class="han">鬼</span>의 이웃</h2></div></div>
+  <p class="lead">시기를 고르면 그 시기 <span class="han">鬼</span>의 이웃을, 부트스트랩 <b>40회 재학습</b>에서
+    살아남은 <b>안정성</b>(0~100)과 함께 보여준다. 글자가 크고 진할수록 안정적이며, <b>●</b>는
+    core 이웃(안정성 ≥70). 점선 글자에 마우스를 올리거나 탭하면 풀이가 나온다.</p>
+  <div class="bins" id="binBtns"></div>
+  <div class="chips" id="chips"></div>
+</section>
+
+<section id="accretion" class="scard wide">
+  <div class="scard-head"><div class="scard-n">06</div><div>
+    <div class="scard-tag">누적 서사</div>
+    <h2 class="scard-title">교체가 아니라 <b>누적</b>이다</h2></div></div>
+  <p class="acc-thesis han-mix" id="accThesis"></p>
+  <div class="layers" id="layers"></div>
+</section>
+
+<section id="heatmap" class="scard wide">
+  <div class="scard-head"><div class="scard-n">07</div><div>
+    <div class="scard-tag">시기 간 변화</div>
+    <h2 class="scard-title">시대가 바뀌면 이웃도 바뀌었나 — 진짜 이동일까?</h2></div></div>
+  <p class="lead">두 시기의 이웃 집합이 얼마나 겹치는지(부트스트랩 평균 Jaccard). 대각선은 <b>같은 시기</b> 두 재학습이
+    겹치는 정도, 곧 <b>노이즈 바닥(within)</b>이고, 나머지는 <b>다른 시기</b> 사이 겹침(cross)이다. 셀을 클릭하면 두 시기의
+    안정 이웃 교집합·차집합을 볼 수 있다.</p>
+  <div class="note" id="heatFinding"></div>
+  <div class="grid2">
+    <div id="heatChart" class="chart" style="height:440px"></div>
+    <div class="side">
+      <h4 id="cmpTitle">셀을 클릭하세요</h4>
+      <div id="cmpBody" style="font-size:14px;color:var(--ink2)"></div>
+    </div>
+  </div>
+  <h4 style="margin:26px 0 2px;color:var(--ink)">인접 시기 전환 — 노이즈 바닥(within) vs 시기 간(cross)</h4>
+  <p class="cap" style="margin:0 0 12px"><b>cross</b>가 <b>within</b>보다 낮을수록 노이즈를 넘는 실제 이동이다.</p>
+  <div class="sig-grid" id="sigPanel"></div>
+</section>
+
+<section id="ladder" class="scard wide">
+  <div class="scard-head"><div class="scard-n">08</div><div>
+    <div class="scard-tag">신뢰도 사다리</div>
+    <h2 class="scard-title">이 이웃은 믿을 만한가 — 4단 판별</h2></div></div>
+  <p class="lead" id="ladderIntro"></p>
+  <div class="explain" id="ladderExplain"></div>
+  <p class="lead" id="ladderLeadAfter" style="margin-top:18px"></p>
+  <div class="ladder-grid">
+    <div id="ladderChart" class="chart" style="height:420px"></div>
+    <div class="cases-mini" id="ladderCases"></div>
+  </div>
+  <div class="note" id="paraNote"></div>
+  <div class="para-pairs" id="paraPairs"></div>
+</section>
+
+<section id="cases" class="scard wide">
+  <div class="scard-head"><div class="scard-n">09</div><div>
+    <div class="scard-tag">심화 사례</div>
+    <h2 class="scard-title">원문으로 보는 세 장면</h2></div></div>
+  <div class="cases" id="caseList"></div>
+</section>
+
+<section id="method" class="scard wide method">
+  <div class="scard-head"><div class="scard-n">10</div><div>
+    <div class="scard-tag">방법·재현</div>
+    <h2 class="scard-title">어떻게 만들었나</h2></div></div>
+  <dl id="methodDl"></dl>
+  <h4 style="margin:22px 0 0;color:var(--ink)">한계</h4>
+  <ul class="limits" id="limits"></ul>
+  <div class="refs" id="refs"></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-note">
+    조선왕조실록(국사편찬위원회 공개데이터) 기사 단위 코퍼스 · 시기별 Word2Vec 이웃 분석 ·
+    이웃 안정성과 시기 전환 유의성은 <b>부트스트랩 40회 재학습</b>으로 검증했습니다.
+  </div>
+</footer>
+
+<div class="tt" id="tooltip"><div class="ttw" id="ttw"></div><div id="ttd"></div></div>
+
+{% endraw %}
