@@ -2,6 +2,7 @@
 title: "컴퓨터의 개념 및 실습"
 title_en: "Digital Computer Concept and Practice"
 regular: true
+order: 5
 date: 2024-03-01
 description: "인문계 신입생을 위한 컴퓨터 과학·파이썬 입문 학부 교양 (서울대 언어학과)"
 ---

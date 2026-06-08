@@ -2,6 +2,7 @@
 title: "컴퓨터언어학"
 title_en: "Computational Linguistics"
 regular: true
+order: 7
 date: 2022-03-01
 description: "PyTorch로 자연어처리 딥러닝 기법을 다루는 학부 전공필수 (서울대 언어학과)"
 ---

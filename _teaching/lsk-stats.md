@@ -2,6 +2,7 @@
 title: "언어학 통계 입문"
 title_en: "Introduction to Linguistic Statistics"
 regular: false
+order: 8
 date: 2025-08-11
 description: "2025 LSK-시몬느 언어학 학교 · Python 실습 병행 통계 입문(전 8회)"
 ---

@@ -2,6 +2,7 @@
 title: "언어와 컴퓨터"
 title_en: "Language and Computer"
 regular: true
+order: 6
 date: 2021-09-01
 description: "파이썬으로 배우는 자연어처리 입문 학부 전공탐구 (서울대 언어학과)"
 ---

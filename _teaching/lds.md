@@ -2,6 +2,7 @@
 title: "언어데이터과학"
 title_en: "Linguistics and Data Science"
 regular: true
+order: 4
 date: 2024-09-01
 description: "언어 연구에 쓰는 데이터 분석 기법을 다루는 학부 전공선택 (서울대 언어학과)"
 ---

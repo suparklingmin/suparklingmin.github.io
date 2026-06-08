@@ -2,6 +2,7 @@
 title: "인문데이터과학개론"
 title_en: "Introduction to Data Science for the Humanities"
 regular: true
+order: 1
 date: 2026-03-01
 description: "인문학을 위한 데이터과학 입문 (서울대 디지털인문학 연계전공)"
 ---

@@ -2,6 +2,7 @@
 title: "인문데이터과학연습"
 title_en: "Seminar in Data Science for the Humanities"
 regular: true
+order: 3
 date: 2026-03-01
 description: "인문학을 위한 데이터과학 세미나 (서울대 디지털인문학 연계전공)"
 ---

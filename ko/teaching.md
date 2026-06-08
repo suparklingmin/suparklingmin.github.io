@@ -6,8 +6,8 @@ permalink: /ko/teaching/
 
 {{ site.data.i18n.ko.teaching_intro }}
 
-{%- assign regular = site.teaching | where_exp: "c", "c.regular" | sort: "date" | reverse -%}
-{%- assign nonreg = site.teaching | where_exp: "c", "c.regular != true" | sort: "date" | reverse -%}
+{%- assign regular = site.teaching | where_exp: "c", "c.regular" | sort: "order" -%}
+{%- assign nonreg = site.teaching | where_exp: "c", "c.regular != true" | sort: "order" -%}
 
 {% if regular.size > 0 %}
 ## {{ site.data.i18n.ko.teaching_regular }}

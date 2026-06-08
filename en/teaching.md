@@ -8,8 +8,8 @@ permalink: /en/teaching/
 
 <p><em>{{ site.data.i18n.en.teaching_ko_only }}</em></p>
 
-{%- assign regular = site.teaching | where_exp: "c", "c.regular" | sort: "date" | reverse -%}
-{%- assign nonreg = site.teaching | where_exp: "c", "c.regular != true" | sort: "date" | reverse -%}
+{%- assign regular = site.teaching | where_exp: "c", "c.regular" | sort: "order" -%}
+{%- assign nonreg = site.teaching | where_exp: "c", "c.regular != true" | sort: "order" -%}
 
 {% if regular.size > 0 %}
 ## {{ site.data.i18n.en.teaching_regular }}

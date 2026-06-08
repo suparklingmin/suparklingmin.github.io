@@ -2,7 +2,8 @@
 title: "모두의 말뭉치 활용 방법"
 title_en: "How to Use the Modu Corpus"
 regular: false
-date: 2022-01-01
+order: 9
+date: 2022-09-27
 description: "국립국어원 제작 온라인 강의(전 6회) · 모두의 말뭉치 활용법"
 ---
 
