@@ -9,6 +9,7 @@ ko:
     home: "홈"
     research: "연구"
     resources: "자료"
+    teaching: "강의"
     about: "소개"
   # 헤더의 언어 전환 링크에 보일 '상대 언어' 이름
   switch: "English"
@@ -23,6 +24,7 @@ en:
     home: "Home"
     research: "Research"
     resources: "Resources"
+    teaching: "Teaching"
     about: "About"
   switch: "한국어"
   research_intro: "A collection of research presented as interactive web documents."

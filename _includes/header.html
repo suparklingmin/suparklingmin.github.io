@@ -14,6 +14,7 @@
 {%- assign home = base | append: '/' -%}
 {%- assign research = base | append: '/research/' -%}
 {%- assign resources = base | append: '/resources/' -%}
+{%- assign teaching = base | append: '/teaching/' -%}
 {%- assign about = base | append: '/about/' -%}
 {%- if page.alt_url -%}{%- assign alt = page.alt_url -%}{%- else -%}{%- assign alt = page.url | replace_first: base, otherbase -%}{%- endif -%}
 <header class="site-header"><div class="site-header__inner">
@@ -22,6 +23,7 @@
     <a href="{{ home | relative_url }}"{% if page.url == home %} aria-current="page"{% endif %}>{{ t.nav.home }}</a>
     <a href="{{ research | relative_url }}"{% if page.url contains research %} aria-current="page"{% endif %}>{{ t.nav.research }}</a>
     <a href="{{ resources | relative_url }}"{% if page.url contains resources %} aria-current="page"{% endif %}>{{ t.nav.resources }}</a>
+    <a href="{{ teaching | relative_url }}"{% if page.url contains teaching %} aria-current="page"{% endif %}>{{ t.nav.teaching }}</a>
     <a href="{{ about | relative_url }}"{% if page.url contains about %} aria-current="page"{% endif %}>{{ t.nav.about }}</a>
     <a class="site-header__lang" href="{{ alt | relative_url }}" hreflang="{{ other }}" rel="alternate">{{ t.switch }}</a>
   </nav>

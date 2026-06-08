@@ -8,6 +8,7 @@
 {%- assign home = base | append: '/' -%}
 {%- assign research = base | append: '/research/' -%}
 {%- assign resources = base | append: '/resources/' -%}
+{%- assign teaching = base | append: '/teaching/' -%}
 {%- assign about = base | append: '/about/' -%}
 <footer class="site-footer"><div class="site-footer__inner">
   <div class="site-footer__brand">{{ t.brand | escape }}</div>
@@ -15,6 +16,7 @@
     <a href="{{ home | relative_url }}">{{ t.nav.home }}</a>
     <a href="{{ research | relative_url }}">{{ t.nav.research }}</a>
     <a href="{{ resources | relative_url }}">{{ t.nav.resources }}</a>
+    <a href="{{ teaching | relative_url }}">{{ t.nav.teaching }}</a>
     <a href="{{ about | relative_url }}">{{ t.nav.about }}</a>
   </nav>
   <div class="site-footer__meta">
