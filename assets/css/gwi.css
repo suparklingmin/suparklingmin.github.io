@@ -207,10 +207,12 @@ h2{font-size:clamp(23px,3.4vw,32px); margin:.1em 0 .5em; font-weight:700}
 .ex .exb{font-size:14px; color:var(--ink2); line-height:1.6}
 .ex .han{color:var(--accent)}
 /* 사다리 */
-.ladder-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:24px; align-items:start}
-@media(max-width:760px){.ladder-grid{grid-template-columns:1fr}}
-.cases-mini{display:flex; flex-direction:column; gap:10px}
-.cmini{border:1px solid var(--line); border-radius:10px; padding:11px 14px; background:var(--card)}
+.ladder-grid{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:24px; align-items:start}
+@media(max-width:760px){.ladder-grid{grid-template-columns:minmax(0,1fr)}}
+.ladder-grid>*{min-width:0}
+#ladderChart{max-width:100%}
+.cases-mini{display:flex; flex-direction:column; gap:10px; min-width:0}
+.cmini{border:1px solid var(--line); border-radius:10px; padding:11px 14px; background:var(--card); overflow-wrap:anywhere}
 .cmini .vh{display:flex; align-items:center; gap:9px; margin-bottom:3px; flex-wrap:wrap}
 .cmini .vw{font-size:18px; font-weight:700; font-family:"GuiSerif","Noto Serif KR",serif}
 .cmini .vb{font-size:12px; padding:2px 9px; border-radius:20px; color:#fff}
