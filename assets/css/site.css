@@ -6,9 +6,9 @@
    ========================================================================= */
 
 :root{
-  --paper:#f6efe2; --paper2:#efe6d3; --card:#fffdf9;
-  --ink:#2a2420; --ink2:#5b5147; --mut:#8a7f74; --line:#d8ccb4;
-  --accent:#9a6510; --accent-soft:#e8c987; --accent2:#6f8f80;
+  --paper:#f3f5fb; --paper2:#e7ecf6; --card:#ffffff;
+  --ink:#16233f; --ink2:#3a4767; --mut:#7c879e; --line:#d4dce9;
+  --accent:#23467e; --accent-soft:#ffe08a; --accent2:#f2b705;
   --serif:"Noto Serif KR",serif; --sans:"Noto Sans KR",sans-serif;
   --maxw:760px;
 }
@@ -37,7 +37,7 @@ h1,h2,h3,h4{font-family:var(--serif); color:var(--ink); line-height:1.3; letter-
 }
 .post-title::after{
   content:""; display:block; width:48px; height:3px; margin-top:.9rem;
-  background:var(--accent); border-radius:2px;
+  background:var(--accent2); border-radius:2px;
 }
 .post-content{color:var(--ink2); font-size:1.06rem}
 .post-content p{margin:0 0 1.1rem}
@@ -48,14 +48,14 @@ h1,h2,h3,h4{font-family:var(--serif); color:var(--ink); line-height:1.3; letter-
 }
 .post-content h2::after{   /* 소제목용 짧은 강조 밑줄 (h1 강조바의 축소판) */
   content:""; position:absolute; left:0; bottom:-1px;
-  width:2.2rem; height:2px; background:var(--accent); border-radius:2px;
+  width:2.2rem; height:2px; background:var(--accent2); border-radius:2px;
 }
 .post-content h3{
   font-size:1.25rem; margin:2rem 0 .7rem; padding-left:.85rem; position:relative;
 }
 .post-content h3::before{  /* 왼쪽 세로 강조 막대 */
   content:""; position:absolute; left:0; top:.2em; bottom:.2em;
-  width:4px; border-radius:2px; background:var(--accent2,#6f8f80);
+  width:4px; border-radius:2px; background:var(--accent2,#f2b705);
 }
 .post-content hr{border:0; height:1px; background:var(--line); margin:2.5rem 0}
 
@@ -83,7 +83,7 @@ blockquote p:last-child{
   padding:1.2rem 1.4rem; transition:transform .15s, box-shadow .15s, border-color .15s;
 }
 .research-index li:hover,.resource-index li:hover,.teaching-index li:hover{
-  transform:translateY(-2px); box-shadow:0 10px 30px rgba(80,60,20,.08);
+  transform:translateY(-2px); box-shadow:0 10px 30px rgba(20,35,63,.12);
   border-color:var(--accent-soft);
 }
 .research-index li a,.resource-index li a,.teaching-index li a{
@@ -99,14 +99,14 @@ blockquote p:last-child{
 /* ── 코드 ───────────────────────────────────────────────────────── */
 code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em}
 .post-content code{background:var(--paper2); border:0; border-radius:4px; padding:.1em .35em; color:var(--accent)}
-.post-content pre{background:#241c17; color:#f4ece0; border:0; border-radius:10px; padding:1rem 1.2rem; overflow:auto}
+.post-content pre{background:#14213d; color:#eef1f8; border:0; border-radius:10px; padding:1rem 1.2rem; overflow:auto}
 .post-content pre code{background:none; color:inherit; padding:0}
 /* Rouge 신택스 하이라이트 블록도 같은 어두운 톤으로 통일.
    minima solarized 스킨의 `.highlighter-rouge .highlight`(밝은 배경)가
    specificity로 위 .post-content pre를 이기므로 더 강한 선택자로 덮어쓴다. */
 .post-content .highlighter-rouge .highlight,
-.post-content pre.highlight{background:#241c17; border:0; border-radius:10px}
-.post-content .highlight{color:#f4ece0}            /* 색 지정 없는 일반 토큰을 밝게(색 있는 토큰은 자기 색 유지) */
+.post-content pre.highlight{background:#14213d; border:0; border-radius:10px}
+.post-content .highlight{color:#eef1f8}            /* 색 지정 없는 일반 토큰을 밝게(색 있는 토큰은 자기 색 유지) */
 
 @media(max-width:600px){
   .page-content{padding:2.4rem 0 3rem}

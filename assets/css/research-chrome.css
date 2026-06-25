@@ -4,16 +4,30 @@
    모든 research 페이지(관리형·자립형 모두)에 항상 로드되는 "사이트 껍데기"입니다.
    문서 고유의 hero/콘텐츠 푸터와는 별개로, 사이트 내비게이션을 제공합니다.
 
-   · 배경/글자색은 고정 중립값을 써서 어떤 테마(밝은 종이/어두운 hero)에서도
-     안전하게 보이고, 강조(hover)에만 테마의 --accent를 폴백과 함께 사용합니다.
+   · 배경/글자색은 아래 --chrome-* 변수(고정 중립값)를 써서 어떤 테마
+     (밝은 종이/어두운 hero)에서도 안전하게 보이고, 강조(hover)에만 테마의
+     --accent를 chrome 폴백과 함께 사용합니다.
    · 헤더는 sticky가 아닌 정적 바라서, 문서 자체의 sticky 내비와 겹치지 않습니다.
    ========================================================================= */
+
+:root{
+  --chrome-bg:#ffffff;                      /* 헤더 배경 */
+  --chrome-navy:#16233f;                    /* 브랜드·토글 막대·푸터 배경의 기본 네이비 */
+  --chrome-accent:#23467e;                  /* hover 강조 (테마 --accent의 chrome 폴백) */
+  --chrome-nav:#3a4767;                     /* 헤더 내비/언어 링크 글자 */
+  --chrome-border:rgba(22,35,63,.12);       /* 헤더·모바일 구분선 */
+  --chrome-border-soft:rgba(22,35,63,.08);  /* 모바일 항목 구분선(더 옅음) */
+  --chrome-footer-text:#c2cbe0;             /* 푸터 본문 텍스트 */
+  --chrome-footer-meta:#8b95ad;             /* 푸터 메타(흐린 글자) */
+  --chrome-footer-brand:#f2b705;            /* 푸터 브랜드 골드 포인트 */
+  --chrome-footer-hover:#ffffff;            /* 푸터 링크 hover */
+}
 
 /* ── 상단 사이트 헤더 ─────────────────────────────────────────────── */
 .site-header{
   font-family:"Noto Sans KR",sans-serif;
-  background:#fffdf9;
-  border-bottom:1px solid rgba(60,40,25,.10);
+  background:var(--chrome-bg);
+  border-bottom:1px solid var(--chrome-border);
   position:relative; z-index:60;
   /* minima 테마 기본값 리셋 (홈·소개·연구목록 페이지에서 동일하게 보이도록) */
   border-top:0; min-height:0; line-height:normal;
@@ -24,21 +38,21 @@
 }
 .site-header__brand{
   font-family:"Noto Serif KR",serif; font-weight:700; font-size:1rem;
-  color:#2a2420; text-decoration:none; margin-right:auto; letter-spacing:-.01em;
+  color:var(--chrome-navy); text-decoration:none; margin-right:auto; letter-spacing:-.01em;
 }
-.site-header__brand:visited{color:#2a2420}   /* :visited 기본 파랑/보라 방지 */
-.site-header__brand:hover{color:var(--accent,#9a6510)}
+.site-header__brand:visited{color:var(--chrome-navy)}   /* :visited 기본 파랑/보라 방지 */
+.site-header__brand:hover{color:var(--accent,var(--chrome-accent))}
 .site-header__nav{display:flex; gap:1.1rem; flex-wrap:wrap}
 .site-header__nav a,
 .site-header__lang{
-  font-size:.86rem; color:#5b5147; text-decoration:none; font-weight:500;
+  font-size:.86rem; color:var(--chrome-nav); text-decoration:none; font-weight:500;
   white-space:nowrap; transition:color .15s;
 }
 .site-header__nav a:visited,
-.site-header__lang:visited{color:#5b5147}   /* :visited 기본 파랑/보라 방지 */
+.site-header__lang:visited{color:var(--chrome-nav)}   /* :visited 기본 파랑/보라 방지 */
 .site-header__nav a:hover,
 .site-header__nav a[aria-current],
-.site-header__lang:hover{color:var(--accent,#9a6510)}
+.site-header__lang:hover{color:var(--accent,var(--chrome-accent))}
 
 /* 햄버거 토글 — 데스크톱에서는 숨김, 모바일(≤720px)에서만 보임 */
 .site-header__toggle{
@@ -48,7 +62,7 @@
 }
 .site-header__toggle span{
   display:block; width:100%; height:2px; border-radius:2px;
-  background:#2a2420; transition:transform .2s, opacity .2s;
+  background:var(--chrome-navy); transition:transform .2s, opacity .2s;
 }
 .site-header.is-open .site-header__toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .site-header.is-open .site-header__toggle span:nth-child(2){opacity:0}
@@ -57,7 +71,7 @@
 /* ── 하단 사이트 푸터 ─────────────────────────────────────────────── */
 .site-footer{
   font-family:"Noto Sans KR",sans-serif;
-  background:#2a2420; color:#cbbfae;
+  background:var(--chrome-navy); color:var(--chrome-footer-text);
   /* minima 테마 기본값 리셋 */
   border-top:0; padding:0;
 }
@@ -66,16 +80,16 @@
   display:flex; flex-direction:column; align-items:center; text-align:center; gap:.6rem;
 }
 .site-footer__brand{
-  font-family:"Noto Serif KR",serif; color:#f4ece0; font-size:1.05rem; font-weight:700;
+  font-family:"Noto Serif KR",serif; color:var(--chrome-footer-brand); font-size:1.05rem; font-weight:700;
 }
 .site-footer__nav{display:flex; gap:1rem; flex-wrap:wrap; justify-content:center}
-.site-footer__nav a{color:#cbbfae; text-decoration:none; font-size:.86rem; transition:color .15s}
-.site-footer__nav a:visited{color:#cbbfae}
-.site-footer__nav a:hover{color:#fff}
-.site-footer__meta{font-size:.78rem; color:#9a8f80; line-height:1.8}
-.site-footer__meta a{color:#9a8f80; text-decoration:none}
-.site-footer__meta a:visited{color:#9a8f80}
-.site-footer__meta a:hover{color:#cbbfae}
+.site-footer__nav a{color:var(--chrome-footer-text); text-decoration:none; font-size:.86rem; transition:color .15s}
+.site-footer__nav a:visited{color:var(--chrome-footer-text)}
+.site-footer__nav a:hover{color:var(--chrome-footer-hover)}
+.site-footer__meta{font-size:.78rem; color:var(--chrome-footer-meta); line-height:1.8}
+.site-footer__meta a{color:var(--chrome-footer-meta); text-decoration:none}
+.site-footer__meta a:visited{color:var(--chrome-footer-meta)}
+.site-footer__meta a:hover{color:var(--chrome-footer-text)}
 
 /* ── 모바일: 제목 · 언어전환 · 햄버거만 한 줄에, 나머지 링크는 접기 ─── */
 @media(max-width:720px){
@@ -86,12 +100,12 @@
   .site-header__nav{
     display:none; order:10; flex-basis:100%;
     flex-direction:column; gap:0; padding:.2rem 0 .1rem; margin-top:.2rem;
-    border-top:1px solid rgba(60,40,25,.10);
+    border-top:1px solid var(--chrome-border);
   }
   .site-header.is-open .site-header__nav{display:flex}
   .site-header__nav a{
     font-size:.92rem; padding:.62rem .15rem;
-    border-bottom:1px solid rgba(60,40,25,.06);
+    border-bottom:1px solid var(--chrome-border-soft);
   }
   .site-header__nav a:last-child{border-bottom:0}
 }
